@@ -1,0 +1,92 @@
+/* Miuvy Slider */
+.slider {
+    box-sizing: border-box;
+    height: 600px;
+    width: 100%;
+}
+
+.slider-group {
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    display: none;
+    animation-name: slider-active-bg;
+    animation-duration: 1s;
+}
+
+@keyframes slider-active {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slider-active-bg {
+    from {
+        transform: scale(1.3);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.slider-dark {
+    display: flex;
+    height: 600px;
+    width: 100%;
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-image: linear-gradient(-90deg, #00000054, #000000b5);
+}
+
+.slider-item {
+    height: 100%;
+    justify-content: center;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    animation-name: slider-active;
+    animation-duration: 1s;
+}
+
+.slider-main {
+    color: white;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.slider-right {
+    right: 0;
+}
+
+.slider-left {
+    left: 0;
+}
+
+.slider-arrow {
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    width: 10%;
+    top: 0;
+    bottom: 0;
+}
+
+.slider-submain {
+    color: white;
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 30px;
+}
